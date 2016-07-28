@@ -1,3 +1,6 @@
+# Bliss Device
+ro.product.device=quark
+
 # Audio
 ro.qc.sdk.audio.fluencetype=fluence
 persist.audio.fluence.voicecall=true
