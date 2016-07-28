@@ -157,3 +157,25 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 57185009664
 BOARD_CACHEIMAGE_PARTITION_SIZE := 3539992576
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
+
+# Enable dex-preoptimization to speed up first boot sequence
+ifeq ($(HOST_OS),linux)
+  ifeq ($(TARGET_BUILD_VARIANT),user)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+    endif
+  endif
+endif
+
+# Bliss Settings
+BLISS_STRICT := true
+BLISS_O3 := true
+BLISS_GRAPHITE := true
+BLISS_KRAIT := true
+BLISS_PIPE := true
+TARGET_TC_ROM := 4.9-linaro
+TARGET_TC_KERNEL := 4.8-linaro
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
+
+-include vendor/bliss/config/sm.mk
