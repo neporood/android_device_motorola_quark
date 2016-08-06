@@ -5,13 +5,13 @@
   },
   {
     "remote":     "neporood",
-    "repository": "neporood/proprietary_vendor_motorola",
+    "repository": "proprietary_vendor_motorola",
     "target_path": "vendor/motorola",
     "revision":   "RR-M"
   },
   {
     "remote":     "neporood",
-    "repository": "neporood/android_kernel_motorola_apq8084",
+    "repository": "android_kernel_motorola_apq8084",
     "target_path": "kernel/motorola/apq8084",
     "revision":   "cm-13.0"
   }
