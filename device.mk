@@ -135,8 +135,8 @@ PRODUCT_PACKAGES += \
     memtrack.apq8084
 
 # Gello
-PRODUCT_PACKAGES += \
-    Gello
+# PRODUCT_PACKAGES += \
+#    Gello
 
 # IDC
 PRODUCT_COPY_FILES += \
