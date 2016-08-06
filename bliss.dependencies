@@ -4,11 +4,15 @@
     "target_path": "device/qcom/common"
   },
   {
-    "repository": "android_kernel_motorola_apq8084",
-    "target_path": "kernel/motorola/apq8084"
+    "remote":     "neporood",
+    "repository": "neporood/proprietary_vendor_motorola",
+    "target_path": "vendor/motorola",
+    "revision":   "RR-M"
   },
   {
-    "repository": "android_external_connectivity",
-    "target_path": "external/connectivity"
+    "remote":     "neporood",
+    "repository": "neporood/android_kernel_motorola_apq8084",
+    "target_path": "kernel/motorola/apq8084",
+    "revision":   "cm-13.0"
   }
 ]
