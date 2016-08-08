@@ -7,11 +7,11 @@
     "remote":     "neporood",
     "repository": "proprietary_vendor_motorola",
     "target_path": "vendor/motorola",
-    "revision":   "RR-M"
+    "revision":   "bliss6"
   },
   {
-    "remote":     "neporood",
-    "repository": "android_kernel_motorola_apq8084",
+    "remote":     "bhb27",
+    "repository": "bhb27/BHB27Kernel",
     "target_path": "kernel/motorola/apq8084",
     "revision":   "cm-13.0"
   }
