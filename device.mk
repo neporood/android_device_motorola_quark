@@ -103,11 +103,6 @@ PRODUCT_PACKAGES += \
     charger \
     charger_res_images
 
-# CMActions
-PRODUCT_PACKAGES += \
-    libjni_CMActions \
-    CMActions
-
 # CNE
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/andsfCne.xml:system/etc/cne/andsfCne.xml \
@@ -133,10 +128,6 @@ PRODUCT_PACKAGES += \
     hwcomposer.apq8084 \
     libgenlock \
     memtrack.apq8084
-
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
 
 # IDC
 PRODUCT_COPY_FILES += \
