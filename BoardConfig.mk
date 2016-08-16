@@ -50,15 +50,16 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-TARGET_KERNEL_SOURCE := kernel/motorola/apq8084
-TARGET_KERNEL_CONFIG := quark_defconfig
+# TARGET_KERNEL_SOURCE := kernel/motorola/apq8084
+# TARGET_KERNEL_CONFIG := quark_defconfig
+TARGET_PREBUILT_KERNEL := device/motorola/quark/kernel]
 
-WLAN_MODULES:
-	mkdir -p $(KERNEL_MODULES_OUT)/qca_cld
-	mv $(KERNEL_MODULES_OUT)/wlan.ko $(KERNEL_MODULES_OUT)/qca_cld/qca_cld_wlan.ko
-	ln -sf /system/lib/modules/qca_cld/qca_cld_wlan.ko $(TARGET_OUT)/lib/modules/wlan.ko
+# WLAN_MODULES:
+#	mkdir -p $(KERNEL_MODULES_OUT)/qca_cld
+#	mv $(KERNEL_MODULES_OUT)/wlan.ko $(KERNEL_MODULES_OUT)/qca_cld/qca_cld_wlan.ko
+#	ln -sf /system/lib/modules/qca_cld/qca_cld_wlan.ko $(TARGET_OUT)/lib/modules/wlan.ko
 
-TARGET_KERNEL_MODULES += WLAN_MODULES
+# TARGET_KERNEL_MODULES += WLAN_MODULES
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_quark
