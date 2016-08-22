@@ -1,7 +1,8 @@
 [
   {
-    "repository": "neporood/device_qcom_common",
-    "target_path": "device/qcom/common"
+    "repository": "SlimRoms/device_qcom_common",
+    "target_path": "device/qcom/common",
+    "branch": mm6.0
   },
   {
     "repository": "proprietary_vendor_motorola",
