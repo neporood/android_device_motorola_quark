@@ -26,8 +26,8 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREBUILT_DPI := 560dpi xxhdpi xhdpi hdpi
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2560
-TARGET_SCREEN_WIDTH := 1440
+# TARGET_SCREEN_HEIGHT := 2560
+# TARGET_SCREEN_WIDTH := 1440
 
 # No SDCard
 PRODUCT_CHARACTERISTICS := nosdcard
@@ -104,9 +104,9 @@ PRODUCT_PACKAGES += \
     charger_res_images
 
 # CMActions
-PRODUCT_PACKAGES += \
-    libjni_CMActions \
-    CMActions
+# PRODUCT_PACKAGES += \
+#    libjni_CMActions \
+#    CMActions
 
 # CNE
 PRODUCT_COPY_FILES += \
