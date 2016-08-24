@@ -1,12 +1,22 @@
 [
+  { "repository": "neporood/android_device_motorola_quark",
+    "target_path": "device/motorola/quark",
+    "branch": "cosp"
+  },
   {
     "repository": "neporood/proprietary_vendor_motorola",
     "target_path": "vendor/motorola",
     "branch":   "master"
   },
   {
-    "repository": "bhb27/BHB27Kernel",
+    "repository": "CyanogenMod/android_kernel_motorola_apq8084",
     "target_path": "kernel/motorola/apq8084",
     "branch":   "cm-13.0"
+  },
+  {
+    "remote": "bb",
+    "repository": "UBERTC/arm-eabi-4.8",
+    "target_path": "prebuilts/gcc/linux-x86/arm/arm-eabi-4.8",
+    "branch": "master"
   }
 ]
