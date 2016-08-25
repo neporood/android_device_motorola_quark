@@ -1,15 +1,19 @@
 [
-  { "repository": "neporood/android_device_motorola_quark",
+  { 
+    "remote": "neporood",
+    "repository": "android_device_motorola_quark",
     "target_path": "device/motorola/quark",
     "branch": "cosp"
   },
   {
-    "repository": "neporood/proprietary_vendor_motorola",
+    "remote": "neporood",
+    "repository": "proprietary_vendor_motorola",
     "target_path": "vendor/motorola",
     "branch":   "master"
   },
   {
-    "repository": "CyanogenMod/android_kernel_motorola_apq8084",
+    "remote": "CyanogenMod",
+    "repository": "android_kernel_motorola_apq8084",
     "target_path": "kernel/motorola/apq8084",
     "branch":   "cm-13.0"
   },

@@ -13,7 +13,7 @@
 # limitations under the License.
 #
 # This folder needs to me moved before compiling, My move command:
-# mv /home/nepo/aocp/vendor/aocp/products/quark
+# mv /home/nepo/chikara/vendor/chikara/products/quark
 
 # Check for target product
 
