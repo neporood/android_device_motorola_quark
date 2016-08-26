@@ -1,20 +1,20 @@
 $(call inherit-product, device/motorola/quark/full_quark.mk)
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/bliss/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/aosp/config/nfc_enhanced.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 PRODUCT_RELEASE_NAME := DROID Turbo
-PRODUCT_NAME := bliss_quark
+PRODUCT_NAME := aosp_quark
 PRODUCT_DEVICE := quark
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_DISPLAY_ID='bliss_quark-userdebug $(PLATFORM_VERSION) $(BUILD_ID) $(BUILD_NUMBER) test-keys' \
-    TARGET_BUILD_FLAVOR=bliss_quark-userdebug
+    BUILD_DISPLAY_ID='quark-userdebug $(PLATFORM_VERSION) $(BUILD_ID) $(BUILD_NUMBER) test-keys' \
+    TARGET_BUILD_FLAVOR=quark-userdebug

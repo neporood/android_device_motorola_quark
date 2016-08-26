@@ -20,4 +20,5 @@
 # In particular, you can add lunch options with the add_lunch_combo
 # function: add_lunch_combo generic-eng
 
-add_lunch_combo bliss_quark-userdebug
+add_lunch_combo aosp_quark-eng
+add_lunch_combo aosp_quark-userdebug
