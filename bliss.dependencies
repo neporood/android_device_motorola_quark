@@ -9,7 +9,7 @@
     "revision":   "bliss6"
   },
   {
-     "repository": "bhb27/BHB27Kernel",
+    "repository": neporood/kernel_motorola_apq8084",
     "target_path": "kernel/motorola/apq8084",
     "revision":   "cm-13.0"
   }
