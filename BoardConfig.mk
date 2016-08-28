@@ -76,6 +76,7 @@ AUDIO_FEATURE_ENABLED_USBAUDIO := true
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
+BOARD_SUPPORTS_SOUND_TRIGGER := true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
@@ -166,6 +167,9 @@ ifeq ($(HOST_OS),linux)
     endif
   endif
 endif
+
+#LZMA compression
+WITH_LZMA_OTA:= true
 
 # Bliss Settings
 BLISS_STRICT := true
