@@ -1,6 +1,6 @@
 $(call inherit-product, device/motorola/quark/full_quark.mk)
 
-# Inherit some common CM stuff.
+# Inherit some common Bliss stuff.
 $(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 
 # Enhanced NFC
@@ -16,5 +16,5 @@ PRODUCT_DEVICE := quark
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_DISPLAY_ID='bliss_quark-userdebug $(PLATFORM_VERSION) $(BUILD_ID) $(BUILD_NUMBER) test-keys' \
-    TARGET_BUILD_FLAVOR=bliss_quark-userdebug
+    BUILD_DISPLAY_ID='quark-userdebug $(PLATFORM_VERSION) $(BUILD_ID) $(BUILD_NUMBER) test-keys' \
+    TARGET_BUILD_FLAVOR=quark-userdebug
