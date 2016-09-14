@@ -1,10 +1,10 @@
 $(call inherit-product, device/motorola/quark/full_quark.mk)
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/aosp/config/nfc_enhanced.mk)
+# $(call inherit-product, vendor/aosp/config/nfc_enhanced.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
