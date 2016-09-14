@@ -22,8 +22,8 @@ LOCAL_PATH := device/motorola/quark
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
-PRODUCT_AAPT_PREBUILT_DPI := 560dpi xxhdpi xhdpi hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
+PRODUCT_AAPT_PREBUILT_DPI := 560dpi hdpi
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2560
@@ -61,9 +61,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml
 
-$(call inherit-product, frameworks/native/build/phone-xxxhdpi-3072-dalvik-heap.mk)
-
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-3072-hwui-memory.mk)
+$(call inherit-product, frameworks/native/build/phone-hdpi-2048-dalvik-heap.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -103,11 +101,6 @@ PRODUCT_PACKAGES += \
     charger \
     charger_res_images
 
-# CMActions
-PRODUCT_PACKAGES += \
-    libjni_CMActions \
-    CMActions
-
 # CNE
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/andsfCne.xml:system/etc/cne/andsfCne.xml \
@@ -133,10 +126,6 @@ PRODUCT_PACKAGES += \
     hwcomposer.apq8084 \
     libgenlock \
     memtrack.apq8084
-
-# Gello
-# PRODUCT_PACKAGES += \
-#    Gello
 
 # IDC
 PRODUCT_COPY_FILES += \
