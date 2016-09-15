@@ -22,8 +22,9 @@ LOCAL_PATH := device/motorola/quark
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := hdpi
-PRODUCT_AAPT_PREBUILT_DPI := 560dpi hdpi
+PRODUCT_AAPT_PREF_CONFIG := 560dpi
+# A list of dpis to select prebuilt apk, in precedence order.
+PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2560
@@ -61,7 +62,24 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml
 
-$(call inherit-product, frameworks/native/build/phone-hdpi-2048-dalvik-heap.mk)
+# Bliss7 Setting...
+# $(call inherit-product, frameworks/native/build/phone-hdpi-2048-dalvik-heap.mk)
+
+# Shamu Setting, this may not work...
+# setup dalvik vm configs.
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+
+$(call inherit-product-if-exists, hardware/qcom/msm8x84/msm8x84.mk)
+$(call inherit-product-if-exists, vendor/qcom/gpu/msm8x84/msm8x84-gpu-vendor.mk)
+
+# setup dm-verity configs.
+PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/msm_sdcc.1/by-name/system
+$(call inherit-product, build/target/product/verity.mk)
+
+PRODUCT_PACKAGES += \
+    slideshow \
+    verity_warning_images
+# End Shamu
 
 # Audio
 PRODUCT_PACKAGES += \
