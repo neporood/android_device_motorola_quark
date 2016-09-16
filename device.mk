@@ -14,6 +14,12 @@
 # limitations under the License.
 #
 
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+LOCAL_KERNEL := device/motorola/quark-kernel/zImage-dtb
+else
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 $(call inherit-product, vendor/motorola/quark/quark-vendor.mk)
