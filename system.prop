@@ -2,10 +2,12 @@
 ro.product.device=quark
 
 # Audio
+persist.audio.dualmic.config=endfire
 ro.qc.sdk.audio.fluencetype=fluence
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
-persist.audio.fluence.speaker=true
+persist.audio.fluence.speaker=false
+persist.audio.fluence.voicecomm=false
 use.voice.path.for.pcm.voip=true
 use.dedicated.device.for.voip=false
 af.fast_track_multiplier=1
@@ -20,11 +22,16 @@ qcom.bt.le_dev_pwr_class=1
 ro.bluetooth.hfp.ver=1.6
 ro.qualcomm.bluetooth.sap=false
 
+# Camera
+camera2.portability.force_api=1
+media.stagefright.legacyencoder=true
+media.stagefright.less-secure=true
+
 # Display
 ro.qualcomm.cabl=0
-ro.opengles.version=196609
-ro.sf.lcd_density=640
-persist.panel.mountflip=3
+ro.opengles.version=196610
+ro.sf.lcd_density=560
+ro.panel.mountflip=3
 
 # FRP
 ro.frp.pst=/dev/block/platform/msm_sdcc.1/by-name/frp
@@ -65,7 +72,7 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
- 
+
 # RmNet Data
 persist.rmnet.data.enable=true
 persist.data.wda.enable=true
@@ -102,11 +109,17 @@ persist.data.qmi.adb_logmask=0
 # Enable UIM VCC feature
 persist.qcril_uim_vcc_feature=1
 
+# Play store
+ro.com.google.clientidbase.gmm=android-motorola
+
 # SSR
-persist.sys.qc.sub.rdump.max=0
-#persist.sys.qc.sub.rdump.on=1
-#persist.sys.qc.sub.rstrtlvl=3
+persist.sys.qc.sub.rdump.max=20
+persist.sys.qc.sub.rdump.on=1
+persist.sys.qc.sub.rstrtlvl=3
 persist.sys.ssr.restart_level=1
+
+# Storage
+ro.sys.sdcardfs=true
 
 # Time
 persist.timed.enable=true
@@ -128,26 +141,13 @@ wlan.driver.ath=0
 wlan.driver.config=/data/misc/wifi/WCNSS_qcom_cfg.ini
 ro.disableWifiApFirmwareReload=true
 
-# Play store
-ro.com.google.clientidbase.gmm=android-motorola
-
 # Allow tethering without provisioning app
 net.tethering.noprovisioning=true
 
-# system props for the cne module
-persist.cne.feature=0
-
-# Disable airplane mode shutdown feature
-persist.radio.apm_mdm_not_pwdn=1
-
-# Extra Radio
-persist.radio.plmn_name_cmp=1
-
-# Enable dsp gapless mode by default
-audio.offload.gapless.enabled=true
-
-# Allow bypass of first start setup
-ro.setupwizard.mode=OPTIONAL
-
-# Initialize QCA1530 detection
-sys.qca1530=no
+# Motorola Moto MAXX Hardware Info
+ro.device.chipset=Qualcomm Snapdragon 805
+ro.device.cpu=Quad-core 2.7 GHz Krait 450
+ro.device.gpu=Qualcomm Adreno 420
+ro.device.rear_cam=21 MP
+ro.device.front_cam=2 MP
+ro.device.screen_res=1440x2560 pixels (~565 ppi)
